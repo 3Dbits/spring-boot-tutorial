@@ -11,7 +11,8 @@ import reactor.core.publisher.Mono
 @RestController
 @RequestMapping("/api/v1/documentation")
 class DocumentationController(
-    private val documentationService: DocumentationService) {
+    private val documentationService: DocumentationService
+) {
 
     @GetMapping
     fun getAllDocuments(): Flux<Documentation> =
